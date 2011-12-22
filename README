@@ -1,2 +1,29 @@
-The scripts in this repository are designed to facilitate the extraction
-of data from the IPUMS dat files.
+Purpose:
+To provide a simple function that maps the raw IPUMS data extract to the variable values it represents.
+
+For example, the first few lines of an IPUMS data file might look like the following:
+
+2008010000008200082000
+2008010000002300066000
+2008010000008800070021
+2008010000006600070000
+2008010000006600069000
+
+Here, each line represents a single survey respondent. The first four characters of the line are the YEAR variable, the next two are the STATEFIP variable, the next 10 are the PERWT, etc.
+
+The row_generator() function uses the IPUMS data file and the DDI xml file that accompanies it to automatically parse each line of the data file into a dictionary with each key representing the variable value.
+
+Usage:
+
+Step 1: Download the IPUMS dat file (ie, "usa_00001.dat") and the corresponding DDI file (for example, "usa_00001.xml") from the IPUMS website.
+Step 2: Import the row_generator function from the ipums_lib function
+Step 3: Create a row_generator, supplying the paths to the IPUMS dat file and the corresponding DDI file.
+
+Example Usage:
+>>> from ipums_lib import row_generator
+>>>
+>>> rows = row_generator(datapath = "usa_00001.dat", ddipath = "usa_00001.xml")
+>>> for row in rows:
+>>>     print row
+
+{u'STATEFIP': '01', u'PERWT': '00000082.00', u'AGE': '082', u'MIGPLAC1': '000', u'YEAR': '2008'}{u'STATEFIP': '01', u'PERWT': '00000023.00', u'AGE': '066', u'MIGPLAC1': '000', u'YEAR': '2008'}{u'STATEFIP': '01', u'PERWT': '00000088.00', u'AGE': '070', u'MIGPLAC1': '021', u'YEAR': '2008'}{u'STATEFIP': '01', u'PERWT': '00000066.00', u'AGE': '070', u'MIGPLAC1': '000', u'YEAR': '2008'}{u'STATEFIP': '01', u'PERWT': '00000066.00', u'AGE': '069', u'MIGPLAC1': '000', u'YEAR': '2008'}
