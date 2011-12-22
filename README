@@ -26,4 +26,8 @@ Example Usage:
 >>> for row in rows:
 >>>     print row
 
-{u'STATEFIP': '01', u'PERWT': '00000082.00', u'AGE': '082', u'MIGPLAC1': '000', u'YEAR': '2008'}{u'STATEFIP': '01', u'PERWT': '00000023.00', u'AGE': '066', u'MIGPLAC1': '000', u'YEAR': '2008'}{u'STATEFIP': '01', u'PERWT': '00000088.00', u'AGE': '070', u'MIGPLAC1': '021', u'YEAR': '2008'}{u'STATEFIP': '01', u'PERWT': '00000066.00', u'AGE': '070', u'MIGPLAC1': '000', u'YEAR': '2008'}{u'STATEFIP': '01', u'PERWT': '00000066.00', u'AGE': '069', u'MIGPLAC1': '000', u'YEAR': '2008'}
+{u'STATEFIP': '01', u'PERWT': '00000082.00', u'AGE': '082', u'MIGPLAC1': '000', u'YEAR': '2008'}
+{u'STATEFIP': '01', u'PERWT': '00000023.00', u'AGE': '066', u'MIGPLAC1': '000', u'YEAR': '2008'}
+{u'STATEFIP': '01', u'PERWT': '00000088.00', u'AGE': '070', u'MIGPLAC1': '021', u'YEAR': '2008'}
+{u'STATEFIP': '01', u'PERWT': '00000066.00', u'AGE': '070', u'MIGPLAC1': '000', u'YEAR': '2008'}
+{u'STATEFIP': '01', u'PERWT': '00000066.00', u'AGE': '069', u'MIGPLAC1': '000', u'YEAR': '2008'}
