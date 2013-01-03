@@ -7,7 +7,7 @@ def row_generator(datapath, ddipath):
     # get mapping
     pmap = pos_map(ddipath)
     f = open(datapath, 'r')
-    for line in f.readlines():
+    for line in f:
         # apply mapping
         row = {}
         for var in pmap.keys():
